@@ -1,37 +1,123 @@
 <!DOCTYPE html>
 
-{% load static %}
 
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>Alas de Cuervo</title>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">-->
     <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 </head>
 
 <body>
-<div class="page-header">
-    <h1><a href="/">Alas de Cuervo</a></h1>
-</div>
-<ul>
-    <li><a href="https://www.youtube.com/channel/UCbryP_r7Ff_a9JHd_fyygFw">YouTube</a></li>
-    <li><a href="https://www.facebook.com/Alas-de-Cuervo-1889111907826383/">Facebook</a></li>
-    <li><a href="https://www.yooying.com/alasdecuervo890">Instagram</a></li>
-</ul>
+<h1 style="padding: 5px 0px 5px 20px; background-color: black; margin-bottom: 0px;">
+    <a style="font-family: 'Lobster', cursive; color: white; text-decoration: none" href="/">Alas de Cuervo</a>
+</h1>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+    <ul class="navbar-nav">
+        <li class="nav-item active">
+            <a class="nav-link" href="#">Inicio</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Biografía</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbar__dropdown__conciertos" data-toggle="dropdown">
+                Conciertos
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Conciertos Futuros</a>
+                <a class="dropdown-item" href="#">Conciertos Pasados</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbar__dropdown__galeria" data-toggle="dropdown">
+                Galería
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Imágenes</a>
+                <a class="dropdown-item" href="#">Vídeos</a>
+            </div>
+        </li>
+    </ul>
+    <ul class="navbar-nav ml-md-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Contacto</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbar__dropdown__rrss" data-toggle="dropdown">
+                Redes Sociales
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="https://www.youtube.com/channel/UCbryP_r7Ff_a9JHd_fyygFw" target="_blank">YouTube</a>
+                <a class="dropdown-item" href="https://www.facebook.com/Alas-de-Cuervo-1889111907826383/" target="_blank">Facebook</a>
+                <a class="dropdown-item" href="https://www.yooying.com/alasdecuervo890" target="_blank">Instagram</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<h3>
+				h3. Lorem ipsum dolor sit amet.
+			</h3>
 
-<div class="content container">
-    <div class="row">
-        <div class="col-md-8">
             {% block content %}
             {% endblock %}
-        </div>
-    </div>
+			<h2>
+				Heading
+			</h2>
+			<p>
+				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+			</p>
+			<p>
+				<a class="btn" href="#">View details »</a>
+			</p>
+		</div>
+	</div>
 </div>
-
 
 </body>
 </html>
+
+
+<!--{% load static %}-->
+
+<!--<html>-->
+<!--<head>-->
+    <!--<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>-->
+    <!--<title>Alas de Cuervo</title>-->
+    <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">-->
+    <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap-theme.min.css">-->
+    <!--<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">-->
+    <!--<link rel="stylesheet" href="{% static 'css/blog.css' %}">-->
+<!--</head>-->
+
+<!--<body>-->
+<!--<div class="page-header">-->
+    <!--<h1><a href="/">Alas de Cuervo</a></h1>-->
+<!--</div>-->
+<!--<ul>-->
+    <!--<li><a href="https://www.youtube.com/channel/UCbryP_r7Ff_a9JHd_fyygFw">YouTube</a></li>-->
+    <!--<li><a href="https://www.facebook.com/Alas-de-Cuervo-1889111907826383/">Facebook</a></li>-->
+    <!--<li><a href="https://www.yooying.com/alasdecuervo890">Instagram</a></li>-->
+<!--</ul>-->
+
+<!--<div class="content container">-->
+    <!--<div class="row">-->
+        <!--<div class="col-md-8">-->
+            <!--% block content %-->
+            <!--% endblock %-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+
+<!--</body>-->
+<!--</html>-->
 
