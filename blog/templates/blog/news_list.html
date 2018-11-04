@@ -1,13 +1,20 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
+
+<h1>
+    Noticias
+</h1>
+
 {% for piece in news %}
 <div class="post">
-    <div class="date">
-        <p>published: {{ piece.published_date }}</p>
-    </div>
-    <h1><a href="{% url 'news_detail' pk=piece.pk %}">{{ piece.title }}</a></h1>
+    <h2>{{ piece.title }}</h2>
+    <div class="date"><p>published: {{ piece.published_date }}</p></div>
     <p>{{ piece.text|linebreaksbr }}</p>
+    <p><a class="btn" href="{% url 'news_detail' pk=piece.pk %}">Ver detalles »</a></p>
 </div>
+
 {% endfor %}
+
 {% endblock %}
+
