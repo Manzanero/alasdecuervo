@@ -7,11 +7,13 @@
 </h1>
 
 {% for piece in news %}
-<div class="post">
-    <h2>{{ piece.title }}</h2>
-    <div class="date"><p>published: {{ piece.published_date }}</p></div>
-    <p>{{ piece.text|linebreaksbr }}</p>
-    <p><a class="btn" href="{% url 'news_detail' pk=piece.pk %}">Ver detalles »</a></p>
+<div class="card bg-light text-dark">
+    <div class="card-body">
+        <div class="card-text" style="color: #828282;">{{ piece.published_date }}</div>
+        <h4 class="card-title">{{ piece.title }}</h4>
+        <p class="card-text">{{ piece.text|linebreaksbr }}</p>
+        <a href="{% url 'news_detail' pk=piece.pk %}" class="card-link">Ver detalles »</a>
+    </div>
 </div>
 
 {% endfor %}
