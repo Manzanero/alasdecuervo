@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Alas de Cuervo</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap-theme.min.css">
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+</head>
+
+<body>
+<div class="page-header">
+    <h1><a href="/">Alas de Cuervo</a></h1>
+</div>
+<ul>
+    <li><a href="https://www.youtube.com/channel/UCbryP_r7Ff_a9JHd_fyygFw">YouTube</a></li>
+    <li><a href="https://www.facebook.com/Alas-de-Cuervo-1889111907826383/">Facebook</a></li>
+    <li><a href="https://www.yooying.com/alasdecuervo890">Instagram</a></li>
+</ul>
+
+<div class="content container">
+    <div class="row">
+        <div class="col-md-8">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
+
